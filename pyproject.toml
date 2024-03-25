@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "filesystem-broker"
+version = "1.0.1"
+description = ""
+authors = ["Jon Bogaty <jon@jonbogaty.com>"]
+readme = "README.md"
+packages = [{include = "filesystem_broker"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+gitops-utils = {git = "https://github.com/jbcom/gitops-utils.git", branch = "main"}
+git-file-client = {git = "https://github.com/jbcom/git-file-client.git", branch = "main"}
+gitignore-parser = "^0.1.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
